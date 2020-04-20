@@ -25,6 +25,7 @@
   }
 
   --TopbarDesktop_linkHover: {
+    font-family: 'karmaticarcade', Helvetica, Arial, sans-serif;
     border-bottom: 0px solid;
     transition: var(--transitionStyleButton);
 

@@ -30,6 +30,55 @@
       * License URL: https://www.fontspring.com/licenses/mostardesign/webfont
       *
       */
+      @font-face {
+        /* 'Mexcellent3D-Regular' */
+        font-family: 'mexcellent3d';
+        src: url("%PUBLIC_URL%/static/fonts/Mexcellent3D.ttf") format('truetype'),
+            url("%PUBLIC_URL%/static/fonts/Mexcellent3D.woff") format('woff'),
+            url("%PUBLIC_URL%/static/fonts/Mexcellent3D.woff2") format('woff2');
+        font-weight: 400; /* Regular */
+        font-style: normal;
+      }
+
+      @font-face {
+        /* 'Mexcellent-Regular' */
+        font-family: 'mexcellent';
+        src: url("%PUBLIC_URL%/static/fonts/Mexcellent.ttf") format('truetype'),
+            url("%PUBLIC_URL%/static/fonts/Mexcellent.woff") format('woff'),
+            url("%PUBLIC_URL%/static/fonts/Mexcellent.woff2") format('woff2');
+        font-weight: 400; /* Regular */
+        font-style: normal;
+      }
+
+      @font-face {
+        /* 'Garamond-Regular' */
+        font-family: 'garamond';
+        src: url("%PUBLIC_URL%/static/fonts/Garamond.ttf") format('truetype'),
+            url("%PUBLIC_URL%/static/fonts/Garamond.woff") format('woff'),
+            url("%PUBLIC_URL%/static/fonts/Garamond.woff2") format('woff2');
+        font-weight: 400; /* Regular */
+        font-style: normal;
+      }
+
+      @font-face {
+        /* 'ItalicBricks-Regular' */
+        font-family: 'italicbricks';
+        src: url("%PUBLIC_URL%/static/fonts/ItalicBricksRegular.ttf") format('truetype'),
+            url("%PUBLIC_URL%/static/fonts/ItalicBricksRegular.woff") format('woff'),
+            url("%PUBLIC_URL%/static/fonts/ItalicBricksRegular.woff2") format('woff2');
+        font-weight: 400; /* Regular */
+        font-style: normal;
+      }
+
+      @font-face {
+        /* 'KarmaticArcade-V1' */
+        font-family: 'karmaticarcade';
+        src: url("%PUBLIC_URL%/static/fonts/KarmaticArcadeV1.ttf") format('truetype'),
+            url("%PUBLIC_URL%/static/fonts/KarmaticArcadeV1.woff") format('woff'),
+            url("%PUBLIC_URL%/static/fonts/KarmaticArcadeV1.woff2") format('woff2');
+        font-weight: 400; /* Regular */
+        font-style: normal;
+      }
 
       @font-face {
         /* 'SofiaPro-Regular' */
@@ -118,6 +167,11 @@
 
 
         // Fonts we use (Check font-face rules from <style> tag in <head> section)
+        var mexcellent3dRegular = new FontFaceObserver('mexcellent3d', { weight: 400 });
+        var mexcellentRegular = new FontFaceObserver('mexcellent', { weight: 400 });
+        var garamondRegular = new FontFaceObserver('garamond', { weight: 400 });
+        var italicbricksRegular = new FontFaceObserver('italicbricks', { weight: 400 });
+        var karmaticarcadeRegular = new FontFaceObserver('karmaticarcade', { weight: 400 });
         var sofiaproRegular = new FontFaceObserver('sofiapro', { weight: 400 });
         var sofiaproMedium = new FontFaceObserver('sofiapro', { weight: 500 });
         var sofiaproSemibold = new FontFaceObserver('sofiapro', { weight: 600 });
@@ -126,6 +180,11 @@
         var fontLoadingTimeout = 5000;
 
         Promise.all([
+          mexcellent3dRegular.load(null, fontLoadingTimeout),
+          mexcellentRegular.load(null, fontLoadingTimeout),
+          garamondRegular.load(null, fontLoadingTimeout),
+          italicbricksRegular.load(null, fontLoadingTimeout),
+          karmaticarcadeRegular.load(null, fontLoadingTimeout),
           sofiaproRegular.load(null, fontLoadingTimeout),
           sofiaproMedium.load(null, fontLoadingTimeout),
           sofiaproSemibold.load(null, fontLoadingTimeout),
